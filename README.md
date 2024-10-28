@@ -39,7 +39,7 @@ Crear un archivo `.env` en la carpeta `backend` con las siguientes variables:
 
 ```plaintext
 MONGO_URI=mongodb://your_mongo_url
-PORT=Tu_puerto
+PORT=Tu_puerto # Ejemplo: 8080
 ```
 
 #### Frontend
@@ -47,7 +47,7 @@ PORT=Tu_puerto
 Crear un archivo `.env.local` en la carpeta `front` con la siguiente variable:
 
 ```plaintext
-VITE_URL_BACKEND="http://localhost:Tu_puerto"
+VITE_URL_BACKEND="http://localhost:Tu_puerto" # Ejemplo: http://localhost:8080
 ```
 
 ### 3. Instalar dependencias
@@ -76,6 +76,10 @@ En la carpeta `front`, ejecutar:
 npm run dev
 ```
 
-El frontend estará disponible en `http://localhost:5173` (o el puerto que indique Vite).
+El front estará disponible en `http://localhost:5173` (o el puerto que indique Vite).
 
----
+El back este disponible en `http://localhost:8080` (o el puerto que indique la persona).
+
+### 6. Acceder como administrador
+
+Para acceder como administrador, inicia sesión con el correo `admin@example.com` y la contraseña `admin`. 

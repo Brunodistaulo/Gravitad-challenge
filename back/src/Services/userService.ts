@@ -8,7 +8,7 @@ export const loginUser = async (email: string, password: string) => {
     if (!userExists) throw new Error("Usuario no encontrado")
     if (userExists.password !== password) throw new Error("Contraseña incorrecta")
 
-    const token = jwt.sign({ email: userExists.email, id: userExists._id }, 'test', { expiresIn: '1h' })
+    const token = jwt.sign({ email: userExists.email, id: userExists._id, isAdmin: userExists.isAdmin }, 'test', { expiresIn: '1h' })
 
     return {message: "Login correcto", token}
 }

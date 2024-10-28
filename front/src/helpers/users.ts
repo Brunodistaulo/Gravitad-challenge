@@ -22,7 +22,6 @@ export const register = async (name: string, email: string, password: string) =>
             password
         })
         const data = await res.data
-        console.log(data)
         return data
     } catch (error: any) {
         throw new Error(error)

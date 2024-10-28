@@ -15,8 +15,7 @@ export const loginUser = async (email: string, password: string) => {
 
 export const registerUser = async (UserData: IRegister) => {
     const userExists = await Users.findOne({ email: UserData.email })
-    if (userExists) throw new Error("El usuario ya existe")
-    console.log(UserData)
+    if (userExists) throw Error("El usuario ya existe")
     const newUser = await Users.create({ ...UserData })
     const saveUser = await newUser.save()
 

@@ -11,7 +11,6 @@ const Home = () => {
   const [editedMovie, setEditedMovie] = useState<Partial<IMovies>>({});
   const [isAdmin, setIsAdmin] = useState(false);
 
-  // console.log(isAdmin)
 
 
   useEffect(() => {

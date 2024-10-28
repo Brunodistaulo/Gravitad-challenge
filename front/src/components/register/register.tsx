@@ -40,7 +40,6 @@ const RegisterView = () => {
           window.location.href = "/login"
         })
       })
-      console.log(data)
     } catch (error) {
       console.error(error)
     }
@@ -57,7 +56,7 @@ const RegisterView = () => {
         </div>
         <div className='flex flex-col mx-auto w-[70%] gap-3'>
           <label className='text-left text-xl font-semibold'>Correo:</label>
-          <input type="text" name='email' className='border rounded h-9 placeholder:text-gray-400 placeholder:italic focus:outline-none placeholder:font-medium pl-2' onChange={handleChange} value={inputs.email} placeholder='example@example.com' />
+          <input type="email" name='email' className='border rounded h-9 placeholder:text-gray-400 placeholder:italic focus:outline-none placeholder:font-medium pl-2' onChange={handleChange} value={inputs.email} placeholder='example@example.com' />
         </div>
         <div className='flex flex-col mx-auto w-[70%] gap-3'>
           <label className='text-left text-xl font-semibold'>Contraseña:</label>

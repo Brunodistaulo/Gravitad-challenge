@@ -1,4 +1,4 @@
-# Gravitad-challenge
+# Dazlabs-challenge
 # Prueba Técnica Fullstack - Películas
 
 Este proyecto es una aplicación web simple que permite visualizar una lista de películas, registrarse e iniciar sesión. Un administrador puede gestionar el CRUD completo de las películas.

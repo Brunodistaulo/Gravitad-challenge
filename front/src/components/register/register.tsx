@@ -42,6 +42,12 @@ const RegisterView = () => {
       })
     } catch (error) {
       console.error(error)
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'Ocurrio un error al registrar el usuario',
+        confirmButtonColor: "#000000"
+      })
     }
   }
 

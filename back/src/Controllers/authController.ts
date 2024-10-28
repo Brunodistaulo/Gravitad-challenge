@@ -1,4 +1,4 @@
-import { Request, Response } from "express";
+import { Request, Response, NextFunction } from "express";
 import { loginUser, registerUser } from "../Services/userService";
 
 export const login = async (req: Request, res: Response) => {
@@ -12,12 +12,12 @@ export const login = async (req: Request, res: Response) => {
 };
 
 
-export const register = async (req: Request, res: Response) => {
+export const register = async (req: Request, res: Response, next: NextFunction) => {
     try {
         const { name, email, password } = req.body;
         const newUser = await registerUser({ name, email, password });
         res.status(201).json(newUser);
     } catch (error: any) {
-        throw new Error(error);
+        next(error);
     }
 }
